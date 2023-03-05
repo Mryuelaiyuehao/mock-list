@@ -1,0 +1,23 @@
+{
+  "name": "mock-list",
+  "version": "1.0.0",
+  "description": "这是用来测试列表数据的后台程序",
+  "main": "index.js",
+  "scripts": {
+    "serve": "./node_modules/nodemon/bin/nodemon.js index.js"
+  },
+  "keywords": [
+    "mock",
+    "test"
+  ],
+  "author": "xzy",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "4.18.2",
+    "lodash": "4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.20"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mock-list配置后台</title>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="app">
+    <h1>配置参数</h1>
+    <form id="submitForm" method="post">
+      <div class="item url">
+        <label for="url">链接：</label>
+        <input type="text" name="url" placeholder="请输入链接，如：/list" required value="/list">
+      </div>
+      <div class="item totalSize">
+        <label for="totalSize">总数：</label>
+        <input type="number" name="totalSize" placeholder="请输入总数,如：100" required value="100">
+      </div>
+      <div class="item resultCode">
+        <label for="resultCode">状态码：</label>
+        <input type="number" name="resultCode" placeholder="请输入状态码，如：0" value="0">
+      </div>
+      <div class="item description">
+        <label for="description">描述：</label>
+        <input type="text" name="description" placeholder="请输入描述" value="">
+      </div>
+      <div class="item delayTime">
+        <label for="delayTime">最大延迟时间：</label>
+        <input type="number" name="delayTime" placeholder="请输入最大延迟时间，如:10" value="0" required>
+      </div>
+      <div class="item data">
+        <label for="data">数据：</label>
+        <textarea type="textarea" name="data" placeholder="请输入数据" required></textarea>
+      </div>
+      <div class="btn">
+        <button id="submit">发送</button>
+      </div>
+    </form>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
