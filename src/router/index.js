@@ -15,7 +15,7 @@ router.post("/config", (req, res) => {
       description: "参数类型错误",
     });
   }
-  const { url, description } = body;
+  const { url, description, listName } = body;
   const totalSize = Number(body.totalSize);
   const resultCode = Number(body.resultCode);
   const delayTime = Number(body.delayTime);
@@ -58,12 +58,19 @@ router.post("/config", (req, res) => {
       description: "最大延迟时间大于等于0的数字",
     });
   }
+  if (!_.isString(listName)) {
+    return res.send({
+      resultCode: ResultCode.badRequest,
+      description: "列表名称必须是字符串",
+    });
+  }
   resetConfig({
     url,
     totalSize,
     resultCode,
     description,
     delayTime,
+    listName,
     data,
   });
   registerListRouter(router);

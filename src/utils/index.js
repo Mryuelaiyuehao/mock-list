@@ -12,6 +12,7 @@ const resetConfig = ({
   resultCode,
   description,
   delayTime,
+  listName,
   data,
 }) => {
   Config.url = url;
@@ -19,6 +20,7 @@ const resetConfig = ({
   Config.resultCode = resultCode;
   Config.description = description;
   Config.delayTime = delayTime;
+  Config.listName = listName;
   Config.data = data;
   Config.list = [];
   for (let i = 0; i < Config.totalSize; i++) {

@@ -34,7 +34,10 @@ const registerListRouter = (router) => {
         resultCode: String(Config.resultCode),
         description: Config.description,
         data: {
-          list: Config.list.slice((pageIndex - 1) * pageSize, pageIndex * pageSize),
+          [Config.listName]: Config.list.slice(
+            (pageIndex - 1) * pageSize,
+            pageIndex * pageSize
+          ),
           totalSize: Config.totalSize,
           pageIndex: pageIndex,
           pageSize: pageSize,
